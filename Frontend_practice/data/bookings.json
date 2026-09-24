@@ -1,0 +1,35 @@
+[
+  {
+    "id": "1",
+    "tourId": "maldives",
+    "tourName": "Мальдіви",
+    "name": "Test",
+    "email": "test@example.com",
+    "date": "2026-07-01",
+    "guests": "2",
+    "message": "Hello",
+    "createdAt": "2026-06-29T09:38:06.149084Z"
+  },
+  {
+    "id": "2",
+    "tourId": "maldives",
+    "tourName": "Мальдіви",
+    "name": "Test",
+    "email": "test@example.com",
+    "date": "2026-07-01",
+    "guests": "2",
+    "message": "Hello",
+    "createdAt": "2026-06-29T09:44:18.708642Z"
+  },
+  {
+    "id": "3",
+    "tourId": "venice",
+    "tourName": "Венеція",
+    "name": "Дмитро",
+    "email": "leacharthas@gmail.com",
+    "date": "2004-07-22",
+    "guests": "4",
+    "message": "",
+    "createdAt": "2026-06-29T17:49:41.807468Z"
+  }
+]
