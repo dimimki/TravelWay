@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<base href="/">
+
+<title>TravelWay: Тури по світу</title>
+
+<link rel="stylesheet" href="/style.css">
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5S2YK6FLPW"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-5S2YK6FLPW');
+</script>
+
+</head>
+<body>
+
+<header>
+
+<div class="logo">  
+TravelWay
+</div>
+
+<nav>
+
+<ul id="menu">
+
+<li><a href="#home">Головна</a></li>
+<li><a href="#about">Про нас</a></li>
+<li><a href="#tours">Тури</a></li>
+<li><a href="#features">Переваги</a></li>
+<li><a href="#gallery">Галерея</a></li>
+<li><a href="#reviews">Відгуки</a></li>
+<li><a href="#contacts">Контакти</a></li>
+
+</ul>
+
+</nav>
+
+<div id="burger">
+☰
+</div>
+
+</header>
+
+<section class="hero" id="home">
+
+<div class="overlay">
+
+<h1>Відкриття світу разом з нами</h1>
+
+<p>Найкращі подорожі за вигідними цінами.</p>
+
+<a href="#tours" class="btn">Обрати тур</a>
+
+</div>
+
+</section>
+
+<section class="about hidden" id="about">
+
+<h2>Про компанію</h2>
+
+<p>
+
+TravelWay створює комфортні та безпечні подорожі по всьому світу. Наші тури включають авіапереліт, трансфер, готель зі сніданками та підтримку гіда на кожному етапі. Ми підбираємо маршрути для романтичного відпочинку, сімейних канікул та активних пригод.
+
+</p>
+
+</section>
+
+<section class="features hidden" id="features">
+
+<h2>Чому обирають TravelWay</h2>
+
+<div class="feature-grid">
+  <article class="feature-card">
+    <h3>Персональний підхід</h3>
+    <p>Вибір туру враховує ваш графік, бюджет та інтереси, щоб кожна поїздка була унікальною.</p>
+  </article>
+  <article class="feature-card">
+    <h3>Підтримка 24/7</h3>
+    <p>Ми завжди на зв'язку: перед поїздкою, під час туру та після повернення додому.</p>
+  </article>
+  <article class="feature-card">
+    <h3>Прозоре бронювання</h3>
+    <p>Ціни без прихованих комісій, повний перелік послуг і чіткі умови для кожного туру.</p>
+  </article>
+  <article class="feature-card">
+    <h3>Перевірені партнери</h3>
+    <p>Співпрацюємо з готелями, авіакомпаніями та місцевими гідами, яким довіряємо.</p>
+  </article>
+</div>
+
+</section>
+
+<section class="tours hidden" id="tours">
+
+<h2>Популярні напрямки</h2>
+
+<div class="tours-toolbar">
+  <input id="tourSearch" type="search" placeholder="Пошук за напрямком або країною">
+  <select id="tourCategory">
+    <option value="all">Усі тури</option>
+    <option value="sea">Море</option>
+    <option value="city">Місто</option>
+    <option value="mountain">Гори</option>
+  </select>
+</div>
+
+<div id="tourCards" class="cards"></div>
+
+</section>
+
+<section class="gallery hidden" id="gallery">
+
+<h2>Галерея</h2>
+
+<div class="grid">
+
+<img id="gallery1" src="/images/gallery1.jpg" alt="gallery1">
+<img id="gallery2" src="/images/gallery2.jpg" alt="gallery2">
+<img id="gallery3" src="/images/gallery3.jpg" alt="gallery3">
+<img id="gallery4" src="/images/gallery4.jpg" alt="gallery4" loading="lazy">
+<img id="gallery5" src="/images/gallery5.jpg" alt="gallery5" loading="lazy">
+<img id="gallery6" src="/images/gallery6.jpg" alt="gallery6" loading="lazy">
+<img id="gallery7" src="/images/gallery7.jpg" alt="gallery7" loading="lazy">
+<img id="gallery8" src="/images/gallery8.jpg" alt="gallery8">
+<img id="gallery9" src="/images/gallery9.jpg" alt="gallery9">
+<img id="gallery10" src="/images/gallery10.jpg" alt="gallery10" loading="lazy">
+<img id="gallery11" src="/images/hero.jpg" alt="hero" loading="lazy">
+<img id="gallery12" src="/images/bali.jpg" alt="bali" loading="lazy">
+<img id="gallery13" src="/images/paris.jpg" alt="paris" loading="lazy">
+<img id="gallery14" src="/images/maldives.jpg" alt="maldives" loading="lazy">
+
+</div>
+
+</section>
+
+<div class="lightbox hidden" id="lightbox">
+  <div class="lightbox-content">
+    <button class="lightbox-close" aria-label="Закрити">×</button>
+    <img id="lightboxImage" src="" alt="Велике фото">
+    <div class="lightbox-nav">
+      <button type="button" class="lightbox-nav-btn" data-direction="prev" aria-label="Попереднє фото">‹</button>
+      <button type="button" class="lightbox-nav-btn" data-direction="next" aria-label="Наступне фото">›</button>
+    </div>
+  </div>
+</div>
+
+<div class="modal hidden" id="tourModal">
+  <div class="modal-content">
+    <button class="modal-close" aria-label="Закрити">×</button>
+    <div class="modal-body">
+      <img id="modalImage" src="" alt="">
+      <div class="modal-info">
+        <p id="modalCategory" class="modal-category"></p>
+        <h3 id="modalTitle"></h3>
+        <p id="modalCountry"></p>
+        <p id="modalDescription"></p>
+        <ul id="modalHighlights"></ul>
+        <div class="modal-meta">
+          <span id="modalDuration"></span>
+          <span id="modalPrice"></span>
+        </div>
+        <div class="modal-actions">
+          <button class="modal-btn" id="bookNowBtn" type="button">Забронювати</button>
+          <a class="modal-link" id="detailLink" href="#">Відкрити сторінку туру</a>
+        </div>
+        <form id="bookingForm" class="booking-form">
+          <input id="bookingName" type="text" placeholder="Ваше ім'я" required>
+          <input id="bookingEmail" type="email" placeholder="Email" required>
+          <input id="bookingDate" type="date" required>
+          <input id="bookingGuests" type="number" min="1" max="12" placeholder="Кількість гостей" required>
+          <textarea id="bookingMessage" rows="4" placeholder="Додаткові побажання"></textarea>
+          <button class="modal-btn" type="submit">Надіслати бронювання</button>
+          <p id="bookingStatus" class="form-status"></p>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="reviews hidden" id="reviews">
+
+<h2>Відгуки</h2>
+
+<div class="slider">
+
+<p id="reviewText"></p>
+
+</div>
+
+</section>
+
+<section class="contacts hidden" id="contacts">
+
+<h2>Зв'язатися з нами</h2>
+
+<form id="form">
+
+<input
+type="text"
+placeholder="Ваше ім'я"
+id="name">
+
+<input
+ type="email"
+ placeholder="Ваш email"
+ id="email">
+
+<textarea
+ placeholder="Ваше повідомлення"
+ id="message">
+</textarea>
+
+<button type="submit">
+Надіслати
+</button>
+<p id="formStatus" class="form-status"></p>
+
+</form>
+
+<h2>Наші контакти</h2>
+<h3>Телефон: +380 123 456 789</h3>
+<h3>Email: info@travelway.com</h3>
+<h4>Адреса: вул. Прикладна, 10, Київ</h4>
+
+</section>
+
+<footer>
+
+<p>
+
+© 2026 TravelWay
+
+</p>
+
+</footer>
+
+<button id="topBtn">
+↑
+</button>
+
+<script src="/script.js"></script>
+
+</body>
+</html>
